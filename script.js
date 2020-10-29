@@ -7,11 +7,12 @@ var data = d3.csv('unemployment.csv', d3.autoType).then(data => {
         columns.forEach(col=>sum = sum+ d[col]); 
         d.total = sum;}
     );
-    var chart = AreaChart(".chart");
-    chart.update(loadedData);
+    
+    var areaChart = AreaChart(".chart");
+    areaChart.update(loadedData);
 
-    var chart2 = StackedAreaChart(".chart");
-    chart2.update(loadedData);
+    var stackedChart = StackedAreaChart(".chart");
+    stackedChart.update(loadedData);
 });
 
 function AreaChart(container){
@@ -110,6 +111,7 @@ function StackedAreaChart(container) {
                        .attr('x', 0)
                        .attr('y', -10)
                        .attr('font-size', 13);
+
     
 	function update(data){
         var keys = data.columns.slice(1);
