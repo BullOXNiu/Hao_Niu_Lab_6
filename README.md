@@ -1,2 +1,2 @@
-# Hao_Niu_Lab_6
+# Hao Niu Lab 6
 Lab 6 for Visualizations
